@@ -1,7 +1,8 @@
 <img align="center" src="https://socialify.git.ci/logstacklabs/muxel/image?description=1&font=JetBrains+Mono&forks=1&issues=1&language=1&name=1&owner=1&pattern=Plus&pulls=1&stargazers=1&theme=Auto" alt="muxel" width="640" height="320" />
 
 <h1>Muxel Theme <span style="font-size: small">v1.0.0</span></h1>
-<h3>A **_"tech-themed"_** Hugo Portfolio Theme</h3>
+
+### A **_"tech-themed"_** Hugo Portfolio Theme
 
 **Muxel** is a modern, clean & responsive tech-themed Hugo portfolio theme designed for developers, and professionals who want to showcase their work with style and clarity.
 It's built for performance and simplicity, and it offers a light-first design (with dark mode support coming soon), and responsive layouts.
