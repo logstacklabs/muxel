@@ -67,12 +67,13 @@ This project is licensed under the Creative Commons Attribution-NonCommercial-Sh
 
 ## 🙏 Acknowledgements
 - **[HUGO](https://gohugo.io)**
-- **[CANVA](https://canva.com)**
-- **[COOLORS](https://coolors.co/)**
+- **[Canva](https://canva.com)**
+- **[Coolors](https://coolors.co/)**
+- **[Web3Forms](https://web3forms.com)**
 - **[Font Awesome](https://fontawesome.com/)**
 - **[Google Fonts](https://fonts.google.com)**
 - **[EON Color Palette](https://logstacklabs.github.io/eon-swatches/)**
-- **[ikatyang's emoji-cheat-sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#place-map)**
+- **[Ikatyang's Emoji-cheat-sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#place-map)**
 
 ### 💝 Support
 
