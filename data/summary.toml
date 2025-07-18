@@ -1,0 +1,21 @@
+[bio]
+# Name, Summary, CTA buttons, and array of taglines to show on the hero section.
+    fullName = ''
+    summary = ''
+    taglines = []
+    [[bio.cta]]
+        anchor = '' # Link of the CTA button.
+        label = ''  # Label/Title of th CTA button.
+    [[bio.cta]]
+        anchor = ''
+        label = ''
+        download = true # Supposed you link a CV, set whether the file is downloadable or not (false by default).
+
+[about]
+# Section Title, Professional Photo, & bio/summary of your professional portfolio.
+    title = ''
+    avatar = ''
+    summary = []
+    [about.cta]
+        label = ''
+        anchor = ''

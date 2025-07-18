@@ -1,0 +1,29 @@
+# Contains 3 sections (Work Experience, Education, & Certifications)
+# Each section requires section Title, & array of work/education/certification information including
+# Roles/Degree/Certificates, duration/dates, company/school name & logo, brief job/education description...etc.
+[experience]
+    sectionTitle = ''
+    [[experience.entry]]
+        role = ''
+        duration = ''
+        companyName = ''
+        companyLogo = ''
+        summary = ''
+
+[education]
+    sectionTitle = ''
+    [[education.entry]]
+        title = ''
+        date = ''
+        schoolLogo = ''
+        schoolName = ''
+        summary = ''
+
+[certificates]
+    sectionTitle = ''
+    [[certificates.entry]]
+        title = ''
+        issuer = ''
+        dateIssued = ''
+        validationUrl = ''
+        summary = ''

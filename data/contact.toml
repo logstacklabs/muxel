@@ -1,0 +1,23 @@
+[forms]
+    sectionTitle = ''
+    formSubjects = [] # A dropdown list of subjects to add to the contact form
+    [forms.keys]
+        web3forms = '' # Visit `https://web3forms.com/` for an access key
+        recaptcha = '' # Google recaptcha-V3
+
+[card]
+    title = '' # Title of the contact card
+    email = ''
+    phone = ''
+    address = ''
+
+# When adding social URL's, makesure the icon is available on fontawesome and makesure to set the icon name as the key of the social link as shown below.
+[socialAccounts]
+    GitHub = ''
+    BlueSky = ''
+    LinkedIn = ''
+    Instagram = ''
+    [socialAccounts.others]
+    # This section is for icons that are not available under `fa-brands` category.
+        Code = ''
+        Terminal = ''

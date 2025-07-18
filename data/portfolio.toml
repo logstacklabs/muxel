@@ -1,0 +1,31 @@
+[projects]
+    sectionTitle = ''
+    [[projects.entry]]
+        title = ''
+        demoUrl = ''
+        repoUrl = ''
+        screenshot = ''
+        techStack = []
+        summary = ''
+
+[skillset]
+    sectionTitle = ''
+    [[skillset.entry]]
+        icon = '' #icon can either be an emoji or a font-awesome icon.
+        title = ''
+        summary = ''
+
+[services]
+    sectionTitle = ''
+    [[services.entry]]
+        icon = ''
+        title = ''
+        summary = ''
+
+[testimonials]
+    sectionTitle = ''
+    [[testimonials.entry]]
+        name = ''
+        title = ''
+        avatar = ''
+        testimonial = ''
