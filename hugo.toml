@@ -1,0 +1,58 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = ''
+theme = ''
+
+[params]
+    description = ''
+    keywords = []
+
+    [params.config]
+        logo = ''
+        favicon = ''
+
+    [params.config.analytics]
+        goatCounter = ''
+        googleAnalytics = ''
+
+    [params.config.seo]
+        fbAdminsId = ''
+        twitterHandle = ''
+        opengraphImage = ''
+        twitterCardImage = ''
+
+[menus]
+    [[menus.main]]
+        name = 'About'
+        weight = 10
+    [[menus.main]]
+        name = 'Resume'
+        weight = 20
+    [[menus.main]]
+        name = 'Portfolio'
+        weight = 30
+    [[menus.main]]
+        name = 'Services'
+        weight = 40
+    [[menus.main]]
+        name = 'Contact'
+        weight = 50
+
+
+# Do not edit beyond thie point
+[outputs]
+    home = ['HTML', 'RSS']
+
+[minify]
+    minifyOutput = true
+
+enableGitInfo = true
+enableRobotsTXT = true
+enableFingerprinting = true
+
+[taxonomies]
+
+[module]
+    [module.hugoVersion]
+        extended = false
+        min = '0.144.1'
