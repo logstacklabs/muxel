@@ -1,8 +1,9 @@
+sectionTitle = '' # Example: "My Resume"
 # Contains 3 sections (Work Experience, Education, & Certifications)
-# Each section requires section Title, & array of work/education/certification information including
+# Each section requires subsection Title, & array of work/education/certification information including
 # Roles/Degree/Certificates, duration/dates, company/school name & logo, brief job/education description...etc.
 [experience]
-    sectionTitle = ''
+    subSectionTitle = '' # Example: "Work Experience"
     [[experience.entry]]
         role = ''
         duration = ''
@@ -11,7 +12,7 @@
         summary = ''
 
 [education]
-    sectionTitle = ''
+    subSectionTitle = ''
     [[education.entry]]
         title = ''
         date = ''
@@ -20,7 +21,7 @@
         summary = ''
 
 [certificates]
-    sectionTitle = ''
+    subSectionTitle = ''
     [[certificates.entry]]
         title = ''
         issuer = ''

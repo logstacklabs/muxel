@@ -13,7 +13,8 @@
 
 [about]
 # Section Title, Professional Photo, & bio/summary of your professional portfolio.
-    title = ''
+    sectionTitle = 'About Me'
+    tagline = 'Junior Cybersecurity Analyst'
     avatar = ''
     summary = []
     [about.cta]

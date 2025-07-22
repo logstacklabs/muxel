@@ -43,14 +43,14 @@ theme = ''
 [outputs]
     home = ['HTML', 'RSS']
 
-[minify]
-    minifyOutput = true
-
 enableGitInfo = true
 enableRobotsTXT = true
 enableFingerprinting = true
 
 [taxonomies]
+
+[minify]
+    minifyOutput = true
 
 [module]
     [module.hugoVersion]

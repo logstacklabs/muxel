@@ -1,9 +1,10 @@
 [forms]
     sectionTitle = ''
+    sectionTagline = ''
     formSubjects = [] # A dropdown list of subjects to add to the contact form
     [forms.keys]
         web3forms = '' # Visit `https://web3forms.com/` for an access key
-        recaptcha = '' # Google recaptcha-V3
+        recaptcha = '' # Google recaptcha-V3 (Will be available in future versions).
 
 [card]
     title = '' # Title of the contact card

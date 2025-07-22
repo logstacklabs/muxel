@@ -1,5 +1,6 @@
+sectionTitle = '' # Example: "My Portfolio"
 [projects]
-    sectionTitle = ''
+    subSectionTitle = '' #Example: "Recent Projects"
     [[projects.entry]]
         title = ''
         demoUrl = ''
@@ -9,21 +10,21 @@
         summary = ''
 
 [skillset]
-    sectionTitle = ''
+    subSectionTitle = ''
     [[skillset.entry]]
         icon = '' #icon can either be an emoji or a font-awesome icon.
         title = ''
         summary = ''
 
 [services]
-    sectionTitle = ''
+    subSectionTitle = ''
     [[services.entry]]
         icon = ''
         title = ''
         summary = ''
 
 [testimonials]
-    sectionTitle = ''
+    subSectionTitle = ''
     [[testimonials.entry]]
         name = ''
         title = ''

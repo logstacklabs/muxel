@@ -13,8 +13,11 @@ tags = [
     "professional"
 ]
 features = [
+    "Responsive",
     "Lightweight",
     "Single Page Layout",
+    "Font Awesome Support",
+    "Goat Analytics Support",
     "Google Analytics Support"
 ]
 
