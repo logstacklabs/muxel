@@ -48,6 +48,9 @@ It's built for performance and simplicity, and it offers a light-first design (w
       echo 'muxel' >> hugo.toml
       ```
       ```bash
+      cd themes/muxel && npm install
+      ```
+      ```bash
       hugo server
       ```
 
