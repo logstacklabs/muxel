@@ -1,0 +1,103 @@
+{{ $edu := .education }}
+{{ $job := .experience }}
+{{ $certs := .certificates }}
+
+<div class="container">
+    <h2 class="section-title">{{ .sectionTitle | default "Professional Overview" }}</h2>
+    <div class="resume-tabs">
+        {{ with $job.subSectionTitle }}
+            <button class="tab-btn active" data-tab="experience">{{ . }}</button>
+        {{ end }}
+        {{ with $edu.subSectionTitle }}
+            <button class="tab-btn" data-tab="education">{{ . }}</button>
+        {{ end }}
+        {{ with $certs.subSectionTitle }}
+            <button class="tab-btn" data-tab="certifications">{{ . }}</button>
+        {{ end }}
+    </div>
+
+    <div class="tab-content active" id="experience-content">
+        <div class="timeline">
+            {{ range $job.entry }}
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        {{ $imgAlt := title .companyName }}
+                        <div class="timeline-logo">
+                            {{ with .companyLogo }}
+                                {{ $img := partial "functions/resolve-image.html" (dict
+                                        "img" . "width" 48 "height" 48) }}
+                                <img src="{{ $img.url }}" width="{{ $img.width }}" height="{{ $img.height }}" alt="{{ $imgAlt }}">
+                            {{ else }}
+                                <i class="fa-solid fa-xl fa-business-time" role="img"></i>
+                            {{ end }}
+                        </div>
+                        <div class="timeline-info">
+                            <h3>{{ title .role }}</h3>
+                            <h4>{{ title .companyName }}</h4>
+                        </div>
+                        <div class="timeline-date">{{ title .duration }}</div>
+                    </div>
+                    <p class="timeline-summary">
+                        {{ .summary }}
+                    </p>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+
+    <div class="tab-content" id="education-content">
+        <div class="timeline">
+            {{ range $edu.entry }}
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        {{ $imgAlt := title .schoolName }}
+                        <div class="timeline-logo">
+                            {{ with .schoolLogo }}
+                                {{ $img := partial "functions/resolve-image.html" (dict
+                                        "img" . "width" 48 "height" 48) }}
+                                <img src="{{ $img.url }}" width="{{ $img.width }}" height="{{ $img.height }}" alt="{{ $imgAlt }}">
+                            {{ else }}
+                                <i class="fa-solid fa-xl fa-graduation-cap" role="img"></i>
+                            {{ end }}
+                        </div>
+                        <div class="timeline-info">
+                            <h3>{{ title .title }}</h3>
+                            <h4>{{ title .schoolName }}</h4>
+                        </div>
+                        <div class="timeline-date">
+                            {{ .date }}
+                        </div>
+                    </div>
+                    <p class="timeline-summary">
+                        {{ .summary }}
+                    </p>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+
+    <div class="tab-content" id="certifications-content">
+        <div class="timeline">
+            {{ range $certs.entry }}
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-logo">
+                            <i class="fa-solid fa-xl fa-award" role="img"></i>
+                        </div>
+                        <div class="timeline-info">
+                            {{ $url := .validationUrl | default "#" }}
+                            <h3><a href="{{ $url }}" rel="noreferrer noopener" target="_blank">{{ title .title }}</a></h3>
+                            <h4>{{ title .issuer }}</h4>
+                        </div>
+                        <div class="timeline-date">
+                            {{ title .dateIssued }}
+                        </div>
+                    </div>
+                    <p class="timeline-summary">
+                        {{ .summary }}
+                    </p>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
