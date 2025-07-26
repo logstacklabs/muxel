@@ -17,6 +17,3 @@
     tagline = 'Junior Cybersecurity Analyst'
     avatar = ''
     summary = []
-    [about.cta]
-        label = ''
-        anchor = ''
