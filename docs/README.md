@@ -20,7 +20,7 @@ It's built for performance and simplicity, and it offers a light-first design (w
 
 ## 📸 Screenshots & Demo
 - [msio.me](https://msio.me)
-![screenshot](./screenshots/full-page.png)
+![screenshot](./screenshots/screenshot.png)
 
 
 ## 🔧 Quick Start
