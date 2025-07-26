@@ -50,7 +50,7 @@
                 {{ with $contact.card.email }}
                     <div class="contact-item">
                         <i class="fa-regular fa-xl fa-envelope"></i>
-                        <div>
+                        <div class="contact-item-info">
                             <h4>Email</h4>
                             <a href="mailto:{{ . }}">{{ . }}</a>
                         </div>
@@ -59,7 +59,7 @@
                 {{ with $contact.card.phone }}
                     <div class="contact-item">
                         <i class="fa-solid fa-xl fa-phone-volume"></i>
-                        <div>
+                        <div class="contact-item-info">
                             <h4>Phone</h4>
                             <a href="tel:{{ . | replaceRE "[^0-9+]" "" }}">{{ . }}</a>
                         </div>
@@ -68,23 +68,26 @@
                 {{ with $contact.card.address }}
                     <div class="contact-item">
                         <i class="fa-regular fa-xl fa-map"></i>
-                        <div>
+                        <div class="contact-item-info">
                             <h4>Location</h4>
                             <p>{{ . }}</p>
                         </div>
                     </div>
                 {{ end }}
             </div>
-            {{ with $contact.socialAccounts }}
-                <div class="social-links">
-                    {{ $socials := partial "functions/map-social-urls.html" . }}
-                    {{ range $socials }}
-                        <a href="{{ .url }}" title="{{ .title }}" target="_blank" rel="noreferrer noopener">
-                            <i class="{{ .icon }}"></i>
-                        </a>
-                    {{ end }}
-                </div>
-            {{ end }}
+            <div class="socials">
+                <h5>{{ $contact.socials.title | default "Follow My Socials" }}</h5>
+                {{ with $contact.socials.accounts }}
+                    <div class="social-links">
+                        {{ $socials := partial "functions/map-social-urls.html" . }}
+                        {{ range $socials }}
+                            <a href="{{ .url }}" title="{{ .title }}" target="_blank" rel="noreferrer noopener">
+                                <i class="{{ .icon }} fa-xl"></i>
+                            </a>
+                        {{ end }}
+                    </div>
+                {{ end }}
+            </div>
         </div>
     </div>
 </div>

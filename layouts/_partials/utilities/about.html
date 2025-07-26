@@ -26,12 +26,6 @@
             {{ range $about.summary }}
                 <p>{{ . | markdownify }}</p>
             {{ end }}
-            {{ with $about.cta }}
-                <div class="about-btns">
-                    {{ $isLocal := hasPrefix ((urls.Parse .anchor).String) "#" }}
-                    <a href="{{ .anchor }}" class="btn btn-primary" {{ if not $isLocal }} target="_blank" rel="noopener noreferrer" {{ end }}>{{ .label }}</a>
-                </div>
-            {{ end }}
         </div>
     </div>
 </div>

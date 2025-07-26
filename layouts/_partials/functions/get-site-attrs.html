@@ -31,11 +31,11 @@
 
 {{ $twitterHandle := $seo.twitterHandle }}
 {{ if not $twitterHandle }}
-    {{ $twitterHandle = (or .Site.Data.contact.socialAccounts.twitter .Site.Data.contact.socialAccounts.x) }}
+    {{ $twitterHandle = (or .Site.Data.contact.socials.accounts.twitter .Site.Data.contact.socials.accounts.x) }}
 {{ end }}
 
 {{ $socialUrls := slice }}
-{{ $socials := .Site.Data.contact.socialAccounts }}
+{{ $socials := .Site.Data.contact.socials.accounts }}
 
 {{ $socialsMap := partial "functions/map-social-urls.html" $socials }}
 {{ range $socialsMap }}
