@@ -1,6 +1,6 @@
 <img align="center" src="https://socialify.git.ci/logstacklabs/muxel/image?description=1&font=JetBrains+Mono&forks=1&issues=1&language=1&name=1&owner=1&pattern=Plus&pulls=1&stargazers=1&theme=Auto" alt="muxel" width="640" height="320" />
 
-<h1>Muxel Theme <span style="font-size: small">v1.0.0</span></h1>
+<h1>Muxel Theme <span style="font-size: small">v1.1.1</span></h1>
 
 ### A **_"tech-themed"_** Hugo Portfolio Theme
 
@@ -20,41 +20,49 @@ It's built for performance and simplicity, and it offers a light-first design (w
 
 ## 📸 Screenshots & Demo
 - [msio.me](https://msio.me)
-![screenshot](./screenshots/screenshot.png)
+<details>
+<summary>Click to view screenshot</summary>
+<img src="./screenshots/screenshot.png" alt="screenshot">
+</details>
 
 
 ## 🔧 Quick Start
 
 > **Prerequisites**: Git, dart-sass, Hugo
 
-1. This theme is available as a template.
-    - Click on the <kbd>Use this template</kbd> button and then select <kbd>Create a new repository</kbd>.
-    - Name the new repository with a name of your choice.
-    - Clone the repository then modify to your satisfaction.
+In your site's root directory, run:
+```shell
+git init
+```
 
-2. If you don't want to use the template you can follow the steps below:
-    - In your site's root directory run the following commands below
-      ```bash
-      git init
-      ```
-      ```bash
-      git submodule add https://github.com/logstacklabs/muxel.git themes/muxel
-      
-      // OR
-
-      git clone https://github.com/logstacklabs/muxel.git themes/muxel
-      ```
-      ```bash
-      echo 'muxel' >> hugo.toml
-      ```
-      ```bash
-      cd themes/muxel && npm install
-      ```
-      ```bash
-      hugo server
-      ```
+- Download as git submodule or clone the repository:
+```bash
+git submodule add https://github.com/logstacklabs/muxel.git themes/muxel
+```
+OR
+```shell
+git clone https://github.com/logstacklabs/muxel.git themes/muxel
+```
+You cancopy the configuration files from the .idea folder in the theme directory, then install the dependencies
+```bash
+cd themes/muxel && npm install && cd ../..
+```
+```bash
+echo "theme = 'muxel'" >> hugo.toml
+```
+```bash
+hugo server
+```
 
 Then Preview your site at [localhost:1313](http://localhost:1313).
+
+To update them, run the following commands:
+```shell
+cd themes/muxel && git pull origin main && cd ../..
+```
+```shell
+git submodule update --remote --rebase
+```
 
 ## 🍰 Contributing
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
