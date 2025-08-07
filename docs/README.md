@@ -43,7 +43,7 @@ OR
 ```shell
 git clone https://github.com/logstacklabs/muxel.git themes/muxel
 ```
-You cancopy the configuration files from the .idea folder in the theme directory, then install the dependencies
+You can copy the configuration files from the [.idea](../.idea/.configurations.toml) folder in the theme directory, then install the dependencies
 ```bash
 cd themes/muxel && npm install && cd ../..
 ```
