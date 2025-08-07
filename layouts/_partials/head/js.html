@@ -14,12 +14,3 @@
         {{ end }}
     {{ end }}
 {{ end }}
-
-{{ with .Site.Data.contact.forms.keys.recaptcha }}
-    {{ if (ne (urls.Parse site.BaseURL).Hostname "localhost") }}
-        {{/*
-        For Future Versions:
-        <script src="https://www.google.com/recaptcha/api.js?render={{ . }}"></script>
-        */}}
-    {{ end }}
-{{ end }}
