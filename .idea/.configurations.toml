@@ -1,0 +1,198 @@
+##################################
+##                              ##
+##  DEFAULT: hugo.toml file     ##
+##                              ##
+##################################
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = ''
+theme = ''
+
+[params]
+    description = ''
+    keywords = []
+
+    [params.config]
+        logo = ''
+        favicon = ''
+
+    [params.config.analytics]
+        goatCounter = ''
+        googleAnalytics = ''
+
+    [params.config.seo]
+        fbAdminsId = ''
+        twitterHandle = ''
+        opengraphImage = ''
+        twitterCardImage = ''
+
+[menus]
+    [[menus.main]]
+        name = 'About'
+        weight = 10
+    [[menus.main]]
+        name = 'Resume'
+        weight = 20
+    [[menus.main]]
+        name = 'Portfolio'
+        weight = 30
+    [[menus.main]]
+        name = 'Services'
+        weight = 40
+    [[menus.main]]
+        name = 'Contact'
+        weight = 50
+
+
+# Do not edit beyond thie point
+[outputs]
+    home = ['HTML', 'RSS']
+
+enableGitInfo = true
+enableRobotsTXT = true
+enableFingerprinting = true
+
+[taxonomies]
+
+[minify]
+    minifyOutput = true
+
+[module]
+    [module.hugoVersion]
+        extended = false
+        min = '0.148.0'
+
+
+##################################
+##      DATA CONFIGURATIONS     ##
+##################################
+
+##################################
+##      `data/summary.toml`     ##
+##################################
+[bio]
+    # Name, Summary, CTA buttons, and array of taglines to show on the hero section.
+    fullName = ''
+    summary = ''
+    taglines = []
+    [[bio.cta]]
+        anchor = '' # Link of the CTA button.
+        label = ''  # Label/Title of th CTA button.
+    [[bio.cta]]
+        anchor = ''
+        label = ''
+        download = true # Supposed you link a CV, set whether the file is downloadable or not (false by default).
+
+[about]
+    # Section Title, Professional Photo, & bio/summary of your professional portfolio.
+    sectionTitle = 'About Me'
+    tagline = ''
+    avatar = ''
+    summary = []
+
+
+
+
+##################################
+##      `data/resume.toml`      ##
+##################################
+sectionTitle = '' # Example: "My Resume"
+# Contains 3 sections (Work Experience, Education, & Certifications)
+# Each section requires subsection Title, & array of work/education/certification information including
+# Roles/Degree/Certificates, duration/dates, company/school name & logo, brief job/education description...etc.
+[experience]
+    subSectionTitle = '' # Example: "Work Experience"
+    [[experience.entry]]
+        role = ''
+        duration = ''
+        companyName = ''
+        companyLogo = ''
+        summary = ''
+
+[education]
+    subSectionTitle = ''
+    [[education.entry]]
+        title = ''
+        date = ''
+        schoolLogo = ''
+        schoolName = ''
+        summary = ''
+
+[certificates]
+    subSectionTitle = ''
+    [[certificates.entry]]
+        title = ''
+        issuer = ''
+        dateIssued = ''
+        validationUrl = ''
+        summary = ''
+
+
+
+
+##################################
+##    `data/portfolio.toml`     ##
+##################################
+sectionTitle = '' # Example: "My Portfolio"
+[projects]
+    subSectionTitle = '' #Example: "Recent Projects"
+    [[projects.entry]]
+        title = ''
+        demoUrl = ''
+        repoUrl = ''
+        screenshot = ''
+        techStack = []
+        summary = ''
+
+[skillset]
+    subSectionTitle = ''
+    [[skillset.entry]]
+        icon = '' #icon can either be an emoji or a font-awesome icon.
+        title = ''
+        summary = ''
+
+[services]
+    subSectionTitle = ''
+    [[services.entry]]
+        icon = ''
+        title = ''
+        summary = ''
+
+[testimonials]
+    subSectionTitle = ''
+    [[testimonials.entry]]
+        name = ''
+        title = ''
+        avatar = ''
+        testimonial = ''
+
+
+
+
+##################################
+##      `data/contact.toml`     ##
+##################################
+[forms]
+    sectionTitle = ''
+    sectionTagline = ''
+    formSubjects = [] # A dropdown list of subjects to add to the contact form
+    [forms.keys]
+        web3forms = '' # Visit `https://web3forms.com/` for an access key
+        recaptcha = '' # Google recaptcha-V3 (Will be available in future versions).
+
+[card]
+    title = '' # Title of the contact card
+    email = ''
+    phone = ''
+    address = ''
+
+# When adding social URL's, makesure the icon is available on fontawesome and makesure to set the icon name as the key of the social link as shown below.
+[socialAccounts]
+    GitHub = ''
+    BlueSky = ''
+    LinkedIn = '' #eg: in/handle or company/handle
+    Instagram = ''
+    [socialAccounts.others]
+    # This section is for icons that are not available under `fa-brands` category.
+        Code = ''
+        Terminal = ''
