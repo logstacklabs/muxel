@@ -1,11 +1,15 @@
 {{ define "main" }}
     {{ with .Site.Data.summary }}
-        <section class="hero" id="home">
-            {{ partial "utilities/hero.html" .bio }}
-        </section>
-        <section class="about" id="about">
-            {{ partial "utilities/about.html" .about }}
-        </section>
+        {{ with .bio }}
+            <section class="hero" id="home">
+                {{ partial "utilities/hero.html" . }}
+            </section>
+        {{ end }}
+        {{ with .about }}
+            <section class="about" id="about">
+                {{ partial "utilities/about.html" . }}
+            </section>
+        {{ end }}
     {{ end }}
     {{ with .Site.Data.resume }}
         <section class="resume" id="resume">
@@ -13,12 +17,16 @@
         </section>
     {{ end }}
     {{ with .Site.Data.portfolio }}
-        <section class="portfolio" id="portfolio">
-            {{ partial "utilities/portfolio.html" (dict "projects" .projects "skillset" .skillset) }}
-        </section>
-        <section class="services" id="services">
-            {{ partial "utilities/services.html" (dict "services" .services "testimonials" .testimonials) }}
-        </section>
+        {{ with (dict "projects" .projects "skillset" .skillset) }}
+            <section class="portfolio" id="portfolio">
+                {{ partial "utilities/portfolio.html" . }}
+            </section>
+        {{ end }}
+        {{ with (dict "services" .services "testimonials" .testimonials) }}
+            <section class="services" id="services">
+                {{ partial "utilities/services.html" . }}
+            </section>
+        {{ end }}
     {{ end }}
     {{ with .Site.Data.contact }}
         <section class="contact" id="contact">

@@ -16,7 +16,7 @@
 [socialAccounts]
     GitHub = ''
     BlueSky = ''
-    LinkedIn = ''
+    LinkedIn = '' #eg: in/handle or company/handle
     Instagram = ''
     [socialAccounts.others]
     # This section is for icons that are not available under `fa-brands` category.

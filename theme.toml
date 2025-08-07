@@ -1,5 +1,5 @@
 name = "Muxel"
-version = "1.0.0"
+version = "1.0.1"
 description = "A simple, lightweight & customizable, one-page, HUGO portfolio theme."
 homepage = "https://github.com/logstacklabs/muxel.git"
 license = "CC BY-NC-SA 4.0"
@@ -21,7 +21,7 @@ features = [
     "Google Analytics Support"
 ]
 
-min_version = "0.144.1"
+min_version = "0.148.0"
 
 [[authors]]
     name = "Muhammed A."
