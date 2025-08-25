@@ -1,7 +1,8 @@
 <!DOCTYPE html>
+{{- $theme := .Site.Params.config.theme | default `auto` }}
 {{- $lang := site.Language.LanguageCode | default `en_US` }}
 {{- $dir := site.Language.LanguageDirection | default `ltr` }}
-<html lang="{{ $lang }}" dir="{{ $dir }}">
+<html lang="{{ $lang }}" dir="{{ $dir }}" data-theme="{{ $theme }}">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />

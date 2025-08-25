@@ -8,11 +8,11 @@
                         {{ $icon := .icon | default ":service_dog:" }}
                         {{ if (and (hasPrefix .icon ":") (hasSuffix .icon ":")) }}
                             {{ $icon := .icon | default "bookmark" }}
-                            <span role="img" aria-label="{{ .title }} icon">{{ transform.Emojify $icon }}</span>
+                            <i class="emoji-icon" data-emoji="{{ transform.Emojify $icon }}"></i>
                         {{ else }}
-                            <span class="fa-solid fa-{{ .icon }}" role="img" aria-label="{{ .title }} icon"></span>
+                            <i class="fa-solid fa-{{ .icon }}"></i>
                         {{ end }}
-                        <span class="service-name">{{ title .title }}</span>
+                        {{ title .title | markdownify }}
                     </h3>
                     <p class="service-summary">
                         {{ .summary }}
@@ -32,9 +32,7 @@
                     <div class="testimonial {{ $isActive }}">
                         <div class="testimonial-content">
                             {{ with $item.testimonial }}
-                                <p>
-                                    <i class="fa-solid fa-quote-left"></i>{{ . }}<i class="fa-solid fa-quote-right"></i>
-                                </p>
+                                <p>{{ printf "%q" . }}</p>
                             {{ end }}
                         </div>
                         <div class="testimonial-author">
@@ -67,10 +65,10 @@
                 {{ end }}
             </div>
             <div class="testimonial-nav">
-                <button class="prev-btn">
+                <button class="testimonial-btn" id="prev-btn">
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
-                <button class="next-btn">
+                <button class="testimonial-btn" id="next-btn">
                     <i class="fa-solid fa-chevron-right"></i>
                 </button>
             </div>

@@ -9,7 +9,10 @@
                 {{ with .Site.Params.config.logo }}
                     {{ $logo := partial "functions/resolve-image.html" (dict
                             "img" . "width" $width "height" $height) }}
-                    <img src="{{ $logo.url }}" width="{{ $logo.width }}" height="{{ $logo.height }}" alt="{{ $alt }}"><span>{{ upper site.Title }}</span>
+                    {{ with $logo }}
+                        <img src="{{ .url }}" width="{{ .width }}" height="{{ .height }}" alt="{{ $alt }}">
+                    {{ end }}
+                    <span>{{ upper site.Title }}</span>
                 {{ else }}
                     <span>MUXEL</span><span>THEME</span>
                 {{ end }}
@@ -24,8 +27,11 @@
                 {{ end }}
             {{ end }}
         </ul>
-        <div class="hamburger">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+            <i id="theme-toggle-icon" class="fa-regular fa-xl fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
             <i class="fa-solid fa-xl fa-bars-staggered"></i>
-        </div>
+        </button>
     </nav>
 </div>

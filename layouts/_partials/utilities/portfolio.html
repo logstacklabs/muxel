@@ -60,11 +60,11 @@
                 <h3 class="skill-heading">
                     {{ if (and (hasPrefix .icon ":") (hasSuffix .icon ":")) }}
                         {{ $icon := .icon | default "bookmark" }}
-                        <span role="img" aria-label="{{ .title }} icon">{{ transform.Emojify $icon }}</span>
+                        <i class="emoji-icon" data-emoji="{{ transform.Emojify $icon }}"></i>
                     {{ else }}
-                        <span class="fa-solid fa-{{ .icon }}" role="img" aria-label="{{ .title }} icon"></span>
+                        <i class="fa-solid fa-{{ .icon }}"></i>
                     {{ end }}
-                    <span class="skill-name">{{ title .title | markdownify }}</span>
+                    {{ title .title | markdownify }}
                 </h3>
                 <p class="skill-summary">{{ .summary | markdownify }}</p>
             </div>
