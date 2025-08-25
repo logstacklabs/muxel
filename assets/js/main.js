@@ -1,4 +1,5 @@
 import initMenuToggler from './modules/menu.js';
+import initThemeToggler from "./modules/theme.js";
 import initContactForm from './modules/contact.js';
 import initTypewriter from './modules/typewriter.js';
 import {
@@ -26,4 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initPortfolioTabFiltering();
     initTestimonialSlider();
     initContactForm();
+    initThemeToggler()
 });

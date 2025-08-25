@@ -6,21 +6,48 @@
     --bg-color-primary: var(--eo-powder);
     --bg-color-secondary: var(--eo-white);
     --bg-color-tertiary: var(--eo-smoke);
+
     --fg-color-primary: var(--eo-pitch);
     --fg-color-secondary: var(--eo-night);
+
     --accent-color-primary: var(--eo-teal);
     --accent-color-secondary: var(--eo-coal);
+
     --border-color-primary: var(--eo-graphite);
     --border-color-secondary: var(--eo-storm);
+    --border-color-tertiary: var(--eo-sigil);
+
     --hover-color-primary: var(--eo-terra);
     --hover-color-secondary: var(--eo-coral);
     --hover-color-tertiary: var(--eo-peach);
 
     --nav-bg-color: #faf9f633;
     --footer-bg-color: #faf9f670;
+
     --shadow-color-primary: #faf9f633;
     --shadow-color-secondary: #09090933;
     --shadow-color-tertiary: #2a9d8f33;
+}
+
+[data-theme="dark"] {
+    --bg-color-primary: var(--eo-black);
+    --bg-color-secondary: var(--eo-pitch);
+    --bg-color-tertiary: var(--eo-night);
+
+    --fg-color-primary: var(--eo-powder);
+    --fg-color-secondary: var(--eo-white);
+
+    --accent-color-secondary: var(--eo-white);
+
+    --border-color-primary: var(--eo-powder);
+    --border-color-secondary: var(--eo-taupe);
+    --border-color-tertiary: var(--eo-cream);
+
+    --nav-bg-color: #00000033;
+    --footer-bg-color: #00000070;
+
+    --shadow-color-primary: #00000033;
+    --shadow-color-secondary: #faf9f633;
 }
 
 $min-vw: 20rem;

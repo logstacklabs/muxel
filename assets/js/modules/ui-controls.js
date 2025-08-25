@@ -144,8 +144,8 @@ export function initPortfolioTabFiltering() {
  */
 export function initTestimonialSlider() {
     const testimonials = document.querySelectorAll('.testimonial');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
     if (!testimonials.length || !prevBtn || !nextBtn) return;
     
     let currentTestimonial = 0;

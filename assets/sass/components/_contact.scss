@@ -20,7 +20,6 @@
         display: flex;
         flex-direction: column;
         button {
-            display: block;
             margin: 1.25rem auto 0;
             @include breakpoint(22rem) {
                 font-size: 80%;
@@ -56,14 +55,14 @@
 .form-control {
     width: 100%;
     padding: .75rem .9rem;
-    border: .0625rem solid var(--eo-sigil);
+    border: .0625rem solid var(--border-color-tertiary);
     border-radius: .3rem;
     font-family: $font-plex;
     font-size: 1rem;
     transition: all .3s ease;
     &:focus {
         outline: none;
-        box-shadow: 0 0 0 .187rem #4d415333;
+        box-shadow: 0 0 0 .187rem color-mix(in srgb, var(--border-color-tertiary), transparent 80%);
     }
 }
 .form-response {
@@ -93,7 +92,7 @@
 
 .contact-info {
     flex: 1;
-    background: var(--eo-powder);
+    background: var(--bg-color-secondary);
     color: var(--fg-color-primary);
     padding: 1.25rem;
     border-radius: .625rem;
@@ -123,13 +122,19 @@
 }
 .contact-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    gap: .625rem;
     margin-bottom: 1rem;
     i {
-        margin-right: .5rem;
-        margin-top: .75rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        padding-top: 1.25rem;
+        border: .0625rem solid var(--accent-color-primary);
+        color: var(--fg-color-primary);
+        background: color-mix(in srgb, var(--eo-teal), transparent 87%);
         &:hover {
-            color: var(--eo-candy);
+            background: color-mix(in srgb, var(--eo-candy), transparent 44%);
             transition: color .2s ease;
             animation: pulse 1s infinite;
         }
@@ -161,25 +166,24 @@
         padding-bottom: 1rem;
     }
 }
+
 .social-links {
     display: flex;
     gap: .5rem;
     flex-wrap: wrap;
-    a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    a > i {
         width: 2.5rem;
         height: 2.5rem;
-        border-radius: 50%;
+        padding: 1.25rem 0 0;
+        border-radius: 100%;
         transition: all .3s ease;
         color: var(--accent-color-primary);
         background: var(--shadow-color-secondary);
         &:hover {
             text-decoration: none;
-            background: var(--hover-color-tertiary);
             animation: pulse 1s ease-in-out 2;
             animation-fill-mode: forwards;
+            background: var(--hover-color-tertiary);
         }
     }
 }

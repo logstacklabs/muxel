@@ -54,8 +54,8 @@
         flex-wrap: wrap;
         margin: .625rem 0;
         span {
-            color: var(--eo-white);
-            background: #4D4153C4;
+            color: var(--eo-sand);
+            background: color-mix(in srgb, var(--eo-sigil), transparent 40%);
             padding: .1875rem .375rem;
             border-radius: .5rem;
             font-size: 87%;
@@ -80,7 +80,12 @@
         font-weight: 700;
         padding: .25rem .5rem;
         border-radius: .625rem;
-        border: solid .0625rem rgba(77, 65, 83, .4);
+        border: solid .0625rem color-mix(in srgb, var(--border-color-tertiary), transparent 50%);
+        &:hover {
+            color: var(--hover-color-tertiary);
+            border: solid .0625rem color-mix(in srgb, var(--border-color-tertiary), transparent 10%);
+            i { color: var(--hover-color-tertiary); }
+        }
     }
     i {
         margin-right: .25rem;
@@ -107,19 +112,17 @@
 .service-heading {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: .75rem;
-    margin-bottom: 1.25rem;
-    span {
-        @include font-size(.87rem, 1.5rem);
-    }
-    span[role="img"] {
-        padding: .75rem;
+    font-weight: 400;
+    @include font-size(.7rem, 1.5rem);
+    i {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 41%;
         border: .0625rem solid var(--accent-color-primary);
-        border-radius: 50%;
-        line-height: 1;
-        background: #2a9d8f14;
-        @include font-size(1.3rem, 1.7rem);
+        color: var(--fg-color-primary);
+        @include font-size(1.25rem, 1.5rem);
+        background: var(--shadow-color-tertiary);
     }
 }
 .skill-summary, .service-summary {
