@@ -79,19 +79,17 @@
     font-weight: 700;
     padding: .625rem;
     border-bottom: .25rem solid transparent;
-    &.active {
+    &.active, &:hover {
         color: var(--accent-color-primary);
         border-bottom: .25rem solid var(--accent-color-primary);
         box-shadow: 0 .5rem 1.5rem var(--shadow-color-secondary);
-    }
-    &:hover {
     }
 }
 .filter-btn {
     margin: .25rem;
     padding: .625rem .75rem;
     border-radius: .625rem;
-    border: .0625rem solid var(--border-color-primary);
+    border: .0625rem solid var(--border-color-secondary);
     box-shadow: 0 .125rem .5rem var(--shadow-color-secondary);
     &.active, &:hover {
         color: var(--eo-white);
@@ -109,7 +107,7 @@
     justify-content: center;
     width: 2.5rem;
     height: 2.5rem;
-    border-radius: 44%;
+    border-radius: 50%;
     border: .0625rem solid var(--accent-color-primary);
     &:hover {
         i { color: var(--eo-white); }

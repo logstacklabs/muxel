@@ -122,20 +122,17 @@
 }
 .contact-item {
     display: flex;
-    align-items: center;
+    //align-items: center;
     gap: .625rem;
     margin-bottom: 1rem;
     i {
         width: 2.5rem;
         height: 2.5rem;
         border-radius: 50%;
+        transition: color .2s ease;
         padding-top: 1.25rem;
-        border: .0625rem solid var(--accent-color-primary);
-        color: var(--fg-color-primary);
-        background: color-mix(in srgb, var(--eo-teal), transparent 87%);
         &:hover {
-            background: color-mix(in srgb, var(--eo-candy), transparent 44%);
-            transition: color .2s ease;
+            color: var(--hover-color-tertiary);
             animation: pulse 1s infinite;
         }
     }
@@ -175,7 +172,7 @@
         width: 2.5rem;
         height: 2.5rem;
         padding: 1.25rem 0 0;
-        border-radius: 100%;
+        border-radius: 50%;
         transition: all .3s ease;
         color: var(--accent-color-primary);
         background: var(--shadow-color-secondary);
