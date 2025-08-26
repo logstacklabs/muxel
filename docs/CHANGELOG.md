@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.0.1] (2025-08-26)
+#### 🪲 Fixed
+- Icon border radiuses
+- Tab filter button border color & size
+- Icon background color in the contact card
+
 ## [2.0.0] 2025-08-25
 #### 💡 Added
 - New theme mode
@@ -44,6 +50,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - #### ✨ Changed
 - #### 🔥 Removed
 
+[2.0.1]: https://github.com/logstacklabs/muxel/releases/tag/v2.0.1
 [2.0.0]: https://github.com/logstacklabs/muxel/releases/tag/v2.0.0
 [1.1.1]: https://github.com/logstacklabs/muxel/releases/tag/v1.1.1
 [1.0.1]: https://github.com/logstacklabs/muxel/releases/tag/v1.0.1
